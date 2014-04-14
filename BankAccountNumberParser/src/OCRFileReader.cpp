@@ -60,3 +60,8 @@ void OCRFileReader::readOneAccountDigits() {
 		}
 	}
 }
+
+
+
+
+
