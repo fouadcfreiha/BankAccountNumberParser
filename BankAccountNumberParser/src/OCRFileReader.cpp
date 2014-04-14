@@ -55,9 +55,10 @@ void OCRFileReader::readOneAccountDigits() {
 			Parsing parser;
 			parser.accountDecoder(accountNumberMatrix);
 			cout<<parser.accountNumber<<endl;
-
-
 		}
+	}
+	else {
+		cout<<"Could not open file";
 	}
 }
 

@@ -50,9 +50,23 @@ TEST_GROUP(Parsing) {
 		parser.accountDecoder(accountNumberMatrix);
 		CHECK(parser.accountNumber.compare("123456789"));
 	}
+
+	void assertCheckSumCalculationRight(){
+		Parsing parser;
+		CHECK(parser.checkSumCalc("123456789")==0);
+
+	}
+	void assertCheckSumCalculationWrong(){
+			Parsing parser;
+			CHECK(parser.checkSumCalc("12789")!=0);
+
+		}
+
 };
 
 TEST(Parsing, InitialValueAfterCreationIsValid) {
 
 	assertValideLineDecoding();
+	assertCheckSumCalculationRight();
+	assertCheckSumCalculationWrong();
 }
