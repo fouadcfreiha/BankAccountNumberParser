@@ -30,46 +30,46 @@ int Parsing::checkSumCalc(string accountNumber){
 void Parsing::accountDecoder(string accountNumberMatrix[][9]) {
 
 	    string zero=string(" _ ")+
-					string("| |")+
-					string("|_|");
+		        string("| |")+
+			string("|_|");
 
-		string one= string("   ")+
-					string("  |")+
-					string("  |");
+	    string one= string("   ")+
+			string("  |")+
+			string("  |");
 
-		string two= string(" _ ")+
-					string(" _|")+
-					string("|_ ");
+	    string two= string(" _ ")+
+	                string(" _|")+
+			string("|_ ");
 
-		string three=string(" _ ")+
-					 string(" _|")+
-					 string(" _|");
+	    string three=string(" _ ")+
+			 string(" _|")+
+		         string(" _|");
 
-		string four=string("   ")+
-					string("|_|")+
-					string("  |");
+	    string four=string("   ")+
+			string("|_|")+
+			string("  |");
 
-		string five=string(" _ ")+
-					string("|_ ")+
-					string(" _|");
+	    string five=string(" _ ")+
+			string("|_ ")+
+			string(" _|");
 
-		string six=string(" _ ")+
-				   string("|_ ")+
-				   string("|_|");
+	    string six=string(" _ ")+
+		       string("|_ ")+
+		       string("|_|");
 
-		string seven=string(" _ ")+
-					 string("  |")+
-					 string("  |");
+            string seven=string(" _ ")+
+			 string("  |")+
+		         string("  |");
 
-		string eight=string(" _ ")+
-					 string("|_|")+
-					 string("|_|");
+	    string eight=string(" _ ")+
+	                 string("|_|")+
+		         string("|_|");
 
-		string nine=string(" _ ")+
-					string("|_|")+
-					string(" _|");
+	    string nine=string(" _ ")+
+			string("|_|")+
+			string(" _|");
 
-		for (int k=0;k<9;k++)
+	    for (int k=0;k<9;k++)
 				{
 					string totalDigit=accountNumberMatrix[0][k]+accountNumberMatrix[1][k]+accountNumberMatrix[2][k];
 					if (totalDigit==zero)  { accountNumber.insert(k,"0"); }
